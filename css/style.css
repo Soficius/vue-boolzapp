@@ -38,8 +38,11 @@ img{
 .bi-bell-slash{
     background-color: white;
     border-radius: 50%;
+    
+    padding: 1em;
+
 }
-.chat{
+.contact{
     background-color: white;
     height: 4em;
     padding-left: 20px;
@@ -50,8 +53,20 @@ img{
     
 }
 .mine{
-    height: 100vh;
+    height: 100%;
     background-image: url(../img/mine.jpg);
-   
+    padding: 1.5em;
 }
+.chat{
+    padding: 1em;
+    border-radius: 15px;
+    margin: 0.5em 1em;
 
+}
+.bg-green{
+    background-color: #00dd00;
+}
+.text-small{
+    font-size: 0.5em;
+    color: rgb(73, 73, 73);
+}
