@@ -38,9 +38,7 @@ img{
 .bi-bell-slash{
     background-color: white;
     border-radius: 50%;
-    
-    padding: 1em;
-
+    padding: 0.6em;
 }
 .contact{
     background-color: white;
@@ -69,4 +67,11 @@ img{
 .text-small{
     font-size: 0.5em;
     color: rgb(73, 73, 73);
+}
+.contacts,.mine{
+    overflow-y: scroll;
+}
+
+.no-radius * {
+    border-radius: 0;
 }

@@ -27,7 +27,7 @@
                         </div>
                         <div class= "options d-flex align-items-center c-grey" >
                             <i class="bi bi-arrow-clockwise"></i>
-                            <i class="bi bi-contact-left-fill p-2"></i>
+                            <i class="bi bi-chat-left-fill p-2"></i>
                             <i class="bi bi-three-dots-vertical"></i>
                         </div>
                     </div>
@@ -42,17 +42,19 @@
                         </div>
                     </div>
                     <!-- search -->
-                    <div class="search c-left d-flex">
+                    <div class="search c-left d-flex no-radius">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
                             <input type="text" class="form-control" placeholder="cerca o iniza una nuva contact" aria-label="Username" aria-describedby="addon-wrapping">
                         </div>
                     </div>
                     <!-- contacts 1 -->
-                    <div v-for="contact in contacts" class="contact c-left d-flex justify-content-between">
-                        <div class="profile d-flex align-items-center">
-                            <img :src="contact.photo" alt="" class="h-40">
-                            <div class="fw-bold p-2">{{contact.nome}}</div>
+                    <div class="contacts h-100">
+                        <div v-for="contact in contacts" class="contact c-left d-flex justify-content-between">
+                            <div class="profile d-flex align-items-center">
+                                <img :src="contact.photo" alt="" class="h-40">
+                                <div class="fw-bold p-2">{{contact.nome}}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                         </div>
                     </div>
                     <!-- typing -->
-                    <div class="search c-left d-flex">
+                    <div class="search c-left d-flex no-radius">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="bi bi-emoji-smile"></i></span>
                             <input type="text" class="form-control" placeholder="scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping">
