@@ -44,4 +44,14 @@ img{
     height: 4em;
     padding-left: 20px;
 }
+.search{
+    height: 3em;
+    background-color: #8edafc;
+    
+}
+.mine{
+    height: 100vh;
+    background-image: url(../img/mine.jpg);
+   
+}
 
