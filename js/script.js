@@ -1,11 +1,15 @@
 const app = new Vue({
     el: '#app',
     data:{
+        user:{
+            name:'Sofia',
+            avatar: '_io'
+        },
         contacts: [
-            {nome: 'Michele', photo:"img/avatar_1.jpg" },
-            {nome: 'Fabio', photo:"img/avatar_2.jpg" },
-            {nome: 'Samuele', photo:"img/avatar_3.jpg" },
-            {nome: 'Luisa', photo:"img/avatar_4.jpg" },
+            {name: 'Michele', avatar:'_1' },
+            {name: 'Fabio', avatar:'_2' },
+            {name: 'Samuele', avatar:'_3' },
+            {name: 'Luisa', avatar:'_4' },
         ]
-    }
+    },
 })

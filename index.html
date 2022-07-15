@@ -22,8 +22,8 @@
                     <div class="account c-left d-flex justify-content-between">
                         <!-- profilo -->
                         <div class="profile d-flex align-items-center">
-                            <img src="img/avatar_io.jpg" alt="" class="h-40">
-                            <div class="fw-bold p-2">Sofia</div>
+                            <img :src="'img/avatar' + user.avatar + '.jpg'" alt="" class="h-40">
+                            <div class="fw-bold p-2">{{user.name}}</div>
                         </div>
                         <div class= "options d-flex align-items-center c-grey" >
                             <i class="bi bi-arrow-clockwise"></i>
@@ -52,8 +52,8 @@
                     <div class="contacts h-100">
                         <div v-for="contact in contacts" class="contact c-left d-flex justify-content-between">
                             <div class="profile d-flex align-items-center">
-                                <img :src="contact.photo" alt="" class="h-40">
-                                <div class="fw-bold p-2">{{contact.nome}}</div>
+                                <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="h-40">
+                                <div class="fw-bold p-2">{{contact.name}}</div>
                             </div>
                         </div>
                     </div>
