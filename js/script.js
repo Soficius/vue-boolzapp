@@ -1,6 +1,10 @@
 // Milestone 3
 // Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
 // Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+dayjs.extend(dayjs_plugin_customParseFormat)
+function currentDate(){
+  return dayjs(new Date()).format('DD/MM/YYYY HH:mm:ss')
+}
 
 const app = new Vue({
     el: '#app',
@@ -113,12 +117,12 @@ const app = new Vue({
       },
       addMessage(){
         if(this.newMessage!== ''){
-          this.selectedContact.messages.push({date:'16/07/2022 15:30:02', text:this.newMessage,status:'sent'})
+          this.selectedContact.messages.push({date:currentDate(), text:this.newMessage,status:'sent'})
           this.newMessage=''
           setTimeout(()=>{
-            this.selectedContact.messages.push({date:'16/07/2022 15:30:03', text:'ok',status:'received'})
+            this.selectedContact.messages.push({date:currentDate(), text:'ok',status:'received'})
           },1000)
         }
-      }
+      },
     },
 })
