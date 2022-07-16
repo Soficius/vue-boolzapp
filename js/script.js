@@ -108,6 +108,7 @@ const app = new Vue({
         } else if(message.status==='sent'){
           return "chat align-self-end bg-green"
         }
+        return ''
       }
     },
 })
