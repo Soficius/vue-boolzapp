@@ -101,4 +101,14 @@ const app = new Vue({
         return this.contacts[this.selected]
       }
     },
+    methods: {
+      classForMessage(message){
+        if(message.status==='received'){
+          return "chat align-self-start bg-white"
+        } else if(message.status==='sent'){
+          return "chat align-self-end bg-green"
+        }
+        return ''
+      }
+    },
 })

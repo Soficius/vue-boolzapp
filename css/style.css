@@ -75,3 +75,7 @@ img{
 .no-radius * {
     border-radius: 0;
 }
+
+.sel{
+    background: #ccc;
+}
