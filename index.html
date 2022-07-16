@@ -50,7 +50,7 @@
                     </div>
                     <!-- contacts 1 -->
                     <div class="contacts h-100">
-                        <div v-for="contact in contacts" class="contact c-left d-flex justify-content-between">
+                        <div v-for="(contact,i) in contacts" class="contact c-left d-flex justify-content-between" @click="selected=i">
                             <div class="profile d-flex align-items-center">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="h-40">
                                 <div class="fw-bold p-2">{{contact.name}}</div>
@@ -63,9 +63,9 @@
                     <!-- first contact -->
                     <div class="account c-left  d-flex justify-content-between p-1 pb-0 pt-0">
                         <div class="profile d-flex align-items-center">
-                            <img src="img/avatar_1.jpg" alt="" class="h-40">
+                            <img :src="'img/avatar'+selectedContact.avatar+'.jpg'" alt="" class="h-40">
                             <div class="d-flex flex-column p-2 pt-0 pb-0">
-                                <div class="fw-bold">Michele</div>
+                                <div class="fw-bold">{{selectedContact.name}}</div>
                                 <div>ultimo accesso oggi alle 18:00</div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                     <!-- mine -->
                     <div class="mine d-flex flex-column">
                         <div class="chat align-self-end bg-green">
-                            <div>Ciao</div>
+                            <div>ciao</div>
                             <div class="text-end text-small">30/02/2020 25:62:93</div>
                         </div>
                         <div class="chat align-self-end bg-green">
