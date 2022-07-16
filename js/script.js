@@ -1,25 +1,27 @@
-// Milestone 3
-// Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
-// Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+// plugin per la formattazione della data
 dayjs.extend(dayjs_plugin_customParseFormat)
 function currentDate(){
   return dayjs(new Date()).format('DD/MM/YYYY HH:mm:ss')
 }
-
+// vue
 const app = new Vue({
     el: '#app',
     data:{
+      // variabili di appoggio
       selected: 0,
       newMessage:'',
+      //oggetto
       user:{
         name:'Sofia',
         avatar: '_io'
       },
+      // array di oggetti (contacts)
       contacts: [
         {
           name: 'Michele',
           avatar: '_1',
           visible: true,
+          // array di oggetti (messages)
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -102,11 +104,13 @@ const app = new Vue({
       ]
     },
     computed: {
+      // funzione per prendere il contatto selezionato al momento
       selectedContact(){
         return this.contacts[this.selected]
       }
     },
     methods: {
+      // funzione che calcola classe css per messaggio passato
       classForMessage(message){
         if(message.status==='received'){
           return "chat align-self-start bg-white"
@@ -115,6 +119,7 @@ const app = new Vue({
         }
         return ''
       },
+      // funzione per inviare un nuovo messaggio all'enter
       addMessage(){
         if(this.newMessage!== ''){
           this.selectedContact.messages.push({date:currentDate(), text:this.newMessage,status:'sent'})
