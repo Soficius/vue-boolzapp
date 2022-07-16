@@ -86,7 +86,7 @@
                     <div class="search c-left d-flex no-radius">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="bi bi-emoji-smile"></i></span>
-                            <input type="text" class="form-control" placeholder="scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping">
+                            <input v-model:trim="newMessage" @keyup.enter='addMessage' @keyup.esc="newMessage =''" type="text" class="form-control" placeholder="scrivi un messaggio" aria-label="Username" aria-describedby="addon-wrapping">
                             <span class="input-group-text" id="addon-wrapping"><i class="bi bi-mic"></i></span>
                         </div>
                     </div>

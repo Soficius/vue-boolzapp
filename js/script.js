@@ -115,6 +115,9 @@ const app = new Vue({
         if(this.newMessage!== ''){
           this.selectedContact.messages.push({date:'16/07/2022 15:30:02', text:this.newMessage,status:'sent'})
           this.newMessage=''
+          setTimeout(()=>{
+            this.selectedContact.messages.push({date:'16/07/2022 15:30:03', text:'ok',status:'received'})
+          },1000)
         }
       }
     },
