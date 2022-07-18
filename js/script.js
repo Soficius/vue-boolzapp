@@ -1,5 +1,4 @@
-// Milestone 4
-// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+// ●      Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 
 // plugin per la formattazione della data
 dayjs.extend(dayjs_plugin_customParseFormat)
@@ -121,8 +120,12 @@ const app = new Vue({
       }
 
     },
+    // funzione per ricerca utenti in chat
     methods: {
-      
+      updateSearch(value){
+        this.selected = 0
+        this.searchContact = value
+      },
       // funzione che calcola classe css per messaggio passato
       classForMessage(message){
         if(message.status==='received'){
