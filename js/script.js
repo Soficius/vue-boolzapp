@@ -122,6 +122,7 @@ const app = new Vue({
 
     },
     methods: {
+      
       // funzione che calcola classe css per messaggio passato
       classForMessage(message){
         if(message.status==='received'){
