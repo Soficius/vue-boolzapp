@@ -1,5 +1,3 @@
-// ●      Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
-
 // plugin per la formattazione della data
 dayjs.extend(dayjs_plugin_customParseFormat)
 function currentDate(){
