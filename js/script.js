@@ -1,3 +1,6 @@
+// Milestone 4
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+
 // plugin per la formattazione della data
 dayjs.extend(dayjs_plugin_customParseFormat)
 function currentDate(){
@@ -10,6 +13,7 @@ const app = new Vue({
       // variabili di appoggio
       selected: 0,
       newMessage:'',
+      searchContact:'',
       //oggetto
       user:{
         name:'Sofia',
@@ -104,10 +108,18 @@ const app = new Vue({
       ]
     },
     computed: {
+      filteredContacts(){
+        if(this.searchContact === ''){
+          return this.contacts
+        } else {
+          return this.contacts.filter(contact=>contact.name.toLowerCase().includes(this.searchContact.toLowerCase()))
+        }
+      },
       // funzione per prendere il contatto selezionato al momento
       selectedContact(){
-        return this.contacts[this.selected]
+        return this.filteredContacts[this.selected]
       }
+
     },
     methods: {
       // funzione che calcola classe css per messaggio passato

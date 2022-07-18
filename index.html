@@ -54,7 +54,7 @@
                     </div>
                     <!-- contacts 1 -->
                     <div class="contacts h-100">
-                        <div v-for="(contact,i) in contacts" :class="'contact c-left d-flex justify-content-between' + (selected===i ? ' sel': '')" @click="selected=i">
+                        <div v-for="(contact,i) in filteredContacts" :class="'contact c-left d-flex justify-content-between' + (selected===i ? ' sel': '')" @click="selected=i">
                             <div class="profile d-flex align-items-center">
                                 <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="" class="h-40">
                                 <div class="fw-bold p-2">{{contact.name}}</div>
